@@ -1,3 +1,6 @@
-FROM 794236216820.dkr.ecr.eu-west-1.amazonaws.com/default-images-beta:workflow-python-v1
+FROM python:3
+RUN  mkdir WORK_REPO
+RUN  cd  WORK_REPO
+WORKDIR  /WORK_REPO
 ADD hello_world.py .
 CMD ["python", "-u", "hello_world.py"]
